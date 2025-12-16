@@ -128,28 +128,55 @@ function App() {
         </section>
 
         <section id="impact" className="impact-section">
-          <div className="container">
-            <h2 className="section-title">Core Capabilities</h2>
-            <div className="capabilities-grid">
+          <div className="container-wide">
+            <div className="impact-header">
+              <h2 className="section-title">What I Bring to the Table</h2>
+              <p className="impact-description">
+                Eight years of turning complex challenges into elegant solutions across the fintech ecosystem
+              </p>
+            </div>
+            <div className="capabilities-showcase">
+              <div className="capability-card featured">
+                <div className="capability-number">01</div>
+                <div className="capability-icon">👥</div>
+                <h3>Leadership & Team Building</h3>
+                <p>Directed 12 cross-functional developer teams across B2B payment solutions. Built succession pathways that promoted 5+ juniors into senior leadership roles. Champion of mentorship and talent development.</p>
+                <div className="capability-stat">
+                  <span className="stat-highlight">12</span> Teams Led
+                </div>
+              </div>
+              <div className="capability-card featured">
+                <div className="capability-number">02</div>
+                <div className="capability-icon">📈</div>
+                <h3>Revenue Growth & P&L</h3>
+                <p>Doubled recurring revenue from $3M to $5M through strategic 3DS product rollout. Drove $250K+ ARR through OTP authentication commercialization. Expert in pricing strategy and revenue optimization.</p>
+                <div className="capability-stat">
+                  <span className="stat-highlight">$5M+</span> Revenue Generated
+                </div>
+              </div>
               <div className="capability-card">
+                <div className="capability-number">03</div>
                 <div className="capability-icon">🛡️</div>
                 <h3>Fraud & Security</h3>
-                <p>3D Secure, OTP authentication, real-time fraud analytics. Reduced security incidents 30% and recaptured $1.5M+ annually through enhanced detection.</p>
+                <p>Built authentication systems cutting security incidents 30%. Designed fraud analytics that recaptured $1.5M+ annually. Deep expertise in 3D Secure, OTP, and real-time detection.</p>
               </div>
               <div className="capability-card">
+                <div className="capability-number">04</div>
                 <div className="capability-icon">🚀</div>
-                <h3>Product Strategy</h3>
-                <p>Full lifecycle management from market analysis to go-to-market. Launched payment solutions processing millions in transactions for enterprise clients.</p>
+                <h3>Product Strategy & GTM</h3>
+                <p>Full lifecycle ownership from market analysis to commercialization. Led launches processing millions in transactions. Expert in competitive positioning and go-to-market execution.</p>
               </div>
               <div className="capability-card">
+                <div className="capability-number">05</div>
                 <div className="capability-icon">🤖</div>
-                <h3>AI Integration</h3>
-                <p>Championing AI initiatives at Visa to automate workflows and enhance product intelligence. Prompt engineering meets enterprise payments.</p>
+                <h3>AI & Innovation</h3>
+                <p>Championing AI initiatives at Visa to automate workflows. Integrating prompt engineering with enterprise payments to enhance product intelligence and operational efficiency.</p>
               </div>
               <div className="capability-card">
-                <div className="capability-icon">👥</div>
-                <h3>Team Development</h3>
-                <p>Mentored juniors into senior leadership roles. Built succession pathways and fostered cross-functional collaboration across engineering, UX, and ops teams.</p>
+                <div className="capability-number">06</div>
+                <div className="capability-icon">🤝</div>
+                <h3>Stakeholder Alignment</h3>
+                <p>Orchestrated cross-functional collaboration with engineering, legal, compliance, and marketing teams. Expert at C-level reporting and executive decision-making support.</p>
               </div>
             </div>
           </div>
