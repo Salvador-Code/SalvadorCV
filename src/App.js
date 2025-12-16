@@ -7,12 +7,21 @@ function App() {
       <header className="hero">
         <div className="hero-background"></div>
         <div className="container hero-content">
+          <div className="profile-image-container">
+            <div className="profile-image-placeholder">
+              <span className="profile-initials">S</span>
+            </div>
+            <div className="profile-status">
+              <span className="status-dot"></span>
+              Open to opportunities
+            </div>
+          </div>
           <div className="hero-badge">Building the Future of Payments</div>
           <h1 className="title">Hey, I'm Salvador</h1>
           <p className="hero-description">
-            I turn complex payment problems into elegant solutions. Currently at Visa,
-            I blend product strategy with AI to make enterprise payments smarter,
-            safer, and more seamless.
+            First-gen college grad. Product leader. Community builder.
+            I turn complex payment problems into elegant solutions while opening
+            doors for the next generation of tech leaders.
           </p>
           <div className="hero-stats">
             <div className="stat">
@@ -32,6 +41,50 @@ function App() {
       </header>
 
       <main className="main-content">
+        <section className="story-section">
+          <div className="container">
+            <div className="story-content">
+              <div className="story-text">
+                <h2 className="section-title">The Backstory</h2>
+                <p>
+                  I'm a first-generation college graduate and proud Hispanic American who
+                  broke barriers to get here. Being the first in my family to earn a degree
+                  wasn't just about personal achievement—it taught me the power of resilience,
+                  resourcefulness, and blazing trails for others.
+                </p>
+                <p>
+                  That mindset shapes everything I do: from building payment products that
+                  move millions of dollars, to mentoring the next generation of product leaders,
+                  to leading Atlanta's largest Latinx tech community. I believe the best innovation
+                  happens when we bring diverse perspectives to the table and lift others as we climb.
+                </p>
+                <p>
+                  When I'm not shipping products at Visa or running <strong>DisruptivePM</strong>
+                  (my product management platform and coaching practice), you'll find me on panels
+                  sharing insights, advising university programs, or building community through Techqueria.
+                </p>
+              </div>
+              <div className="story-highlights">
+                <div className="highlight-card">
+                  <div className="highlight-icon">🎓</div>
+                  <h3>First-Gen Grad</h3>
+                  <p>First in my family to earn a college degree (BBS + MBA)</p>
+                </div>
+                <div className="highlight-card">
+                  <div className="highlight-icon">🌟</div>
+                  <h3>DisruptivePM</h3>
+                  <p>Founder of product management coaching platform</p>
+                </div>
+                <div className="highlight-card">
+                  <div className="highlight-icon">🎤</div>
+                  <h3>Speaker & Panelist</h3>
+                  <p>Sharing insights on fintech, product, and leadership</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="impact-section">
           <div className="container">
             <h2 className="section-title">What I Actually Do</h2>
@@ -153,8 +206,9 @@ function App() {
                   <h3>Shift4 - Senior PM</h3>
                   <span className="timeline-date">2023</span>
                   <p>
-                    Launched fraud APIs for SpaceX Starlink. Built chargeback portal
-                    that tripled resolution capacity. Designed real-time analytics dashboards.
+                    Launched fraud APIs reducing fraud by 25 bps for enterprise clients.
+                    Built chargeback portal that tripled resolution capacity (300%) and
+                    cut chargeback rates by 50 bps. Designed real-time analytics dashboards.
                   </p>
                 </div>
               </div>
@@ -210,12 +264,12 @@ function App() {
               </div>
               <div className="beyond-card">
                 <div className="beyond-header">
-                  <h3>📚 Continuous Learner</h3>
-                  <span className="beyond-role">MBA, KSU</span>
+                  <h3>💼 DisruptivePM</h3>
+                  <span className="beyond-role">Founder & Coach</span>
                 </div>
                 <p>
-                  Combining technical chops with business acumen. Because the best products
-                  live at the intersection of technology and strategy.
+                  Product management coaching platform helping aspiring and current PMs
+                  level up their skills, build better products, and advance their careers.
                 </p>
               </div>
             </div>
@@ -224,14 +278,31 @@ function App() {
 
         <section className="cta-section">
           <div className="container">
-            <h2>Let's Build Something</h2>
-            <p>
-              Whether it's payments, fraud prevention, AI integration, or product strategy -
-              I'm always interested in solving hard problems with great people.
-            </p>
-            <div className="cta-buttons">
-              <a href="https://linkedin.com" className="cta-button primary">Connect on LinkedIn</a>
-              <a href="mailto:salvador@example.com" className="cta-button secondary">Drop me a line</a>
+            <div className="cta-content">
+              <h2>Let's Build Something</h2>
+              <p>
+                Whether it's payments, fraud prevention, AI integration, product strategy,
+                or speaking engagements - I'm always interested in solving hard problems
+                with great people.
+              </p>
+              <div className="cta-grid">
+                <div className="cta-card">
+                  <h3>💬 Product Consulting</h3>
+                  <p>Need help with product strategy, roadmapping, or go-to-market?</p>
+                </div>
+                <div className="cta-card">
+                  <h3>🎤 Speaking & Panels</h3>
+                  <p>Looking for a speaker on fintech, product management, or leadership?</p>
+                </div>
+                <div className="cta-card">
+                  <h3>🤝 Mentorship</h3>
+                  <p>Want guidance on breaking into product or advancing your PM career?</p>
+                </div>
+              </div>
+              <div className="cta-buttons">
+                <a href="https://linkedin.com" className="cta-button primary">Connect on LinkedIn</a>
+                <a href="mailto:salvador@example.com" className="cta-button secondary">Drop me a line</a>
+              </div>
             </div>
           </div>
         </section>
