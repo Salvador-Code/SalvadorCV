@@ -1,307 +1,236 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="App">
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="nav-container">
+          <div className="nav-logo">Salvador</div>
+          <div className="nav-links">
+            <a onClick={() => scrollToSection('about')}>About</a>
+            <a onClick={() => scrollToSection('impact')}>Impact</a>
+            <a onClick={() => scrollToSection('expertise')}>Expertise</a>
+            <a onClick={() => scrollToSection('contact')}>Contact</a>
+          </div>
+        </div>
+      </nav>
+
       <header className="hero">
-        <div className="hero-background"></div>
+        <div className="hero-gradient"></div>
         <div className="container hero-content">
           <div className="profile-image-container">
             <div className="profile-image-placeholder">
               <span className="profile-initials">S</span>
             </div>
-            <div className="profile-status">
-              <span className="status-dot"></span>
-              Open to opportunities
-            </div>
           </div>
-          <div className="hero-badge">Building the Future of Payments</div>
-          <h1 className="title">Hey, I'm Salvador</h1>
-          <p className="hero-description">
-            First-gen college grad. Product leader. Community builder.
-            I turn complex payment problems into elegant solutions while opening
-            doors for the next generation of tech leaders.
+          <h1 className="hero-title">Salvador</h1>
+          <p className="hero-subtitle">Senior Technical Product Manager</p>
+          <p className="hero-tagline">
+            Building the future of enterprise payments at Visa. First-gen college graduate
+            turning complex fintech challenges into elegant solutions.
           </p>
-          <div className="hero-stats">
-            <div className="stat">
-              <span className="stat-number">$5M+</span>
-              <span className="stat-label">Revenue Generated</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">12</span>
-              <span className="stat-label">Developer Teams Led</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">75%</span>
-              <span className="stat-label">Fraud Reduction</span>
-            </div>
+          <div className="hero-cta">
+            <button onClick={() => scrollToSection('contact')} className="cta-primary">Get In Touch</button>
+            <button onClick={() => scrollToSection('about')} className="cta-secondary">Learn More</button>
           </div>
+        </div>
+        <div className="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div className="scroll-arrow"></div>
         </div>
       </header>
 
       <main className="main-content">
-        <section className="story-section">
+        <section id="about" className="metrics-section">
           <div className="container">
-            <div className="story-content">
-              <div className="story-text">
-                <h2 className="section-title">The Backstory</h2>
-                <p>
-                  I'm a first-generation college graduate and proud Hispanic American who
-                  broke barriers to get here. Being the first in my family to earn a degree
-                  wasn't just about personal achievement—it taught me the power of resilience,
-                  resourcefulness, and blazing trails for others.
+            <div className="metrics-grid">
+              <div className="metric-card">
+                <div className="metric-value">$5M+</div>
+                <div className="metric-label">Revenue Generated</div>
+                <div className="metric-detail">Doubled revenue from $3M to $5M through 3DS product rollout</div>
+              </div>
+              <div className="metric-card">
+                <div className="metric-value">300%</div>
+                <div className="metric-label">Capacity Increase</div>
+                <div className="metric-detail">Tripled chargeback resolution through portal optimization</div>
+              </div>
+              <div className="metric-card">
+                <div className="metric-value">75 bps</div>
+                <div className="metric-label">Fraud Reduction</div>
+                <div className="metric-detail">Combined reduction through authentication & fraud systems</div>
+              </div>
+              <div className="metric-card">
+                <div className="metric-value">12</div>
+                <div className="metric-label">Teams Led</div>
+                <div className="metric-detail">Directing developer teams across B2B payment solutions</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="about-section">
+          <div className="container">
+            <div className="about-grid">
+              <div className="about-content">
+                <h2 className="section-title">Breaking Barriers, Building Products</h2>
+                <p className="about-text">
+                  As a <strong>first-generation college graduate</strong> and proud Hispanic American,
+                  I understand what it means to break through barriers. That resilience shapes how I
+                  approach product management—turning complex enterprise payment challenges into
+                  elegant solutions that move millions of dollars.
                 </p>
-                <p>
-                  That mindset shapes everything I do: from building payment products that
-                  move millions of dollars, to mentoring the next generation of product leaders,
-                  to leading Atlanta's largest Latinx tech community. I believe the best innovation
-                  happens when we bring diverse perspectives to the table and lift others as we climb.
+                <p className="about-text">
+                  Currently at <strong>Visa</strong>, I lead B2B acceptance products, championing AI
+                  integration and directing cross-functional developer teams. My journey spans Shift4,
+                  CO-OP Solutions, Paya, and Fiserv—where I've built fraud prevention systems,
+                  authentication platforms, and payment gateways that serve enterprises globally.
                 </p>
-                <p>
-                  When I'm not shipping products at Visa or running <strong>DisruptivePM</strong>
-                  (my product management platform and coaching practice), you'll find me on panels
-                  sharing insights, advising university programs, or building community through Techqueria.
+                <p className="about-text">
+                  Beyond my day job, I'm the founder of <strong>DisruptivePM</strong>, a product
+                  management coaching platform, and serve as Atlanta Chapter Director for
+                  <strong> Techqueria</strong>, the largest Latinx tech network.
                 </p>
               </div>
-              <div className="story-highlights">
-                <div className="highlight-card">
-                  <div className="highlight-icon">🎓</div>
-                  <h3>First-Gen Grad</h3>
-                  <p>First in my family to earn a college degree (BBS + MBA)</p>
+              <div className="about-highlights">
+                <div className="highlight-item">
+                  <span className="highlight-number">01</span>
+                  <h3>Product Leadership</h3>
+                  <p>8+ years leading fintech products from ideation to commercialization</p>
                 </div>
-                <div className="highlight-card">
-                  <div className="highlight-icon">🌟</div>
-                  <h3>DisruptivePM</h3>
-                  <p>Founder of product management coaching platform</p>
+                <div className="highlight-item">
+                  <span className="highlight-number">02</span>
+                  <h3>Community Impact</h3>
+                  <p>Building pathways for the next generation of tech leaders</p>
                 </div>
-                <div className="highlight-card">
-                  <div className="highlight-icon">🎤</div>
-                  <h3>Speaker & Panelist</h3>
-                  <p>Sharing insights on fintech, product, and leadership</p>
+                <div className="highlight-item">
+                  <span className="highlight-number">03</span>
+                  <h3>Thought Leadership</h3>
+                  <p>Speaking on panels about fintech, product strategy, and diversity</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="impact-section">
+        <section id="impact" className="impact-section">
           <div className="container">
-            <h2 className="section-title">What I Actually Do</h2>
-            <p className="section-subtitle">
-              I solve problems where money, technology, and people intersect
-            </p>
-            <div className="impact-grid">
-              <div className="impact-card">
-                <div className="impact-icon">🛡️</div>
-                <h3>Fight Fraud</h3>
-                <p>
-                  Built authentication systems that cut security incidents by 30%
-                  and saved millions in chargebacks. Think 3D Secure, OTP, and
-                  real-time fraud analytics.
-                </p>
+            <h2 className="section-title">Core Capabilities</h2>
+            <div className="capabilities-grid">
+              <div className="capability-card">
+                <div className="capability-icon">🛡️</div>
+                <h3>Fraud & Security</h3>
+                <p>3D Secure, OTP authentication, real-time fraud analytics. Reduced security incidents 30% and recaptured $1.5M+ annually through enhanced detection.</p>
               </div>
-              <div className="impact-card">
-                <div className="impact-icon">🚀</div>
-                <h3>Ship Products</h3>
-                <p>
-                  From SpaceX Starlink to enterprise ERPs, I've launched payment
-                  solutions that process millions in transactions. Full lifecycle:
-                  ideation to commercialization.
-                </p>
+              <div className="capability-card">
+                <div className="capability-icon">🚀</div>
+                <h3>Product Strategy</h3>
+                <p>Full lifecycle management from market analysis to go-to-market. Launched payment solutions processing millions in transactions for enterprise clients.</p>
               </div>
-              <div className="impact-card">
-                <div className="impact-icon">🤖</div>
-                <h3>Leverage AI</h3>
-                <p>
-                  Championing AI initiatives at Visa to automate workflows and
-                  enhance product intelligence. Prompt engineering meets payment tech.
-                </p>
+              <div className="capability-card">
+                <div className="capability-icon">🤖</div>
+                <h3>AI Integration</h3>
+                <p>Championing AI initiatives at Visa to automate workflows and enhance product intelligence. Prompt engineering meets enterprise payments.</p>
               </div>
-              <div className="impact-card">
-                <div className="impact-icon">👥</div>
-                <h3>Build Teams</h3>
-                <p>
-                  Mentored juniors into senior leaders, directed cross-functional
-                  teams, and fostered succession pathways. Product is a team sport.
-                </p>
+              <div className="capability-card">
+                <div className="capability-icon">👥</div>
+                <h3>Team Development</h3>
+                <p>Mentored juniors into senior leadership roles. Built succession pathways and fostered cross-functional collaboration across engineering, UX, and ops teams.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="skills-section">
-          <div className="container">
-            <h2 className="section-title">My Toolkit</h2>
-            <p className="section-subtitle">
-              Technology I use to build, analyze, and ship
-            </p>
-            <div className="skills-container">
-              <div className="skill-group">
-                <h3 className="skill-group-title">Product Craft</h3>
-                <div className="skill-tags">
-                  <span className="skill-tag">Jira & Confluence</span>
-                  <span className="skill-tag">Agile & Scrum</span>
-                  <span className="skill-tag">Product Roadmapping</span>
-                  <span className="skill-tag">Stakeholder Management</span>
-                  <span className="skill-tag">Market Analysis</span>
+        <section id="expertise" className="expertise-section">
+          <div className="container-wide">
+            <h2 className="section-title">Technical Expertise</h2>
+            <div className="expertise-grid">
+              <div className="expertise-category">
+                <h3>Product & Strategy</h3>
+                <div className="expertise-list">
+                  <span>Product Roadmapping</span>
+                  <span>Agile & Scrum</span>
+                  <span>Market Analysis</span>
+                  <span>Go-to-Market Strategy</span>
+                  <span>Stakeholder Management</span>
+                  <span>P&L Ownership</span>
                 </div>
               </div>
-              <div className="skill-group">
-                <h3 className="skill-group-title">Data & Analytics</h3>
-                <div className="skill-tags">
-                  <span className="skill-tag">SQL</span>
-                  <span className="skill-tag">Tableau & Power BI</span>
-                  <span className="skill-tag">MongoDB</span>
-                  <span className="skill-tag">R</span>
-                  <span className="skill-tag">Palantir</span>
+              <div className="expertise-category">
+                <h3>Data & Analytics</h3>
+                <div className="expertise-list">
+                  <span>SQL</span>
+                  <span>Tableau</span>
+                  <span>Power BI</span>
+                  <span>MongoDB</span>
+                  <span>R</span>
+                  <span>Palantir</span>
                 </div>
               </div>
-              <div className="skill-group">
-                <h3 className="skill-group-title">Tech Stack</h3>
-                <div className="skill-tags">
-                  <span className="skill-tag">REST APIs</span>
-                  <span className="skill-tag">JavaScript & Node.js</span>
-                  <span className="skill-tag">HTML/CSS</span>
-                  <span className="skill-tag">Postman</span>
-                  <span className="skill-tag">GitHub</span>
-                  <span className="skill-tag">Mermaid</span>
+              <div className="expertise-category">
+                <h3>Engineering & APIs</h3>
+                <div className="expertise-list">
+                  <span>REST APIs</span>
+                  <span>JavaScript</span>
+                  <span>Node.js</span>
+                  <span>Postman</span>
+                  <span>GitHub</span>
+                  <span>Azure</span>
                 </div>
               </div>
-              <div className="skill-group">
-                <h3 className="skill-group-title">Design & UX</h3>
-                <div className="skill-tags">
-                  <span className="skill-tag">Figma</span>
-                  <span className="skill-tag">Miro</span>
-                  <span className="skill-tag">UIzard</span>
-                  <span className="skill-tag">Adobe Suite</span>
+              <div className="expertise-category">
+                <h3>Design & Tools</h3>
+                <div className="expertise-list">
+                  <span>Figma</span>
+                  <span>Miro</span>
+                  <span>UIzard</span>
+                  <span>Jira</span>
+                  <span>Confluence</span>
+                  <span>Mermaid</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="journey-section">
+        <section id="contact" className="contact-section">
           <div className="container">
-            <h2 className="section-title">The Journey</h2>
-            <p className="section-subtitle">
-              From databases to boardrooms, here's how I got here
-            </p>
-            <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>Visa - Senior TPM</h3>
-                  <span className="timeline-date">2024 - Present</span>
-                  <p>
-                    Leading B2B acceptance products. Directing developer teams,
-                    championing AI integration, and ensuring enterprise-grade quality
-                    through UAT cycles.
-                  </p>
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>Shift4 - Senior PM</h3>
-                  <span className="timeline-date">2023</span>
-                  <p>
-                    Launched fraud APIs reducing fraud by 25 bps for enterprise clients.
-                    Built chargeback portal that tripled resolution capacity (300%) and
-                    cut chargeback rates by 50 bps. Designed real-time analytics dashboards.
-                  </p>
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>CO-OP Solutions</h3>
-                  <span className="timeline-date">2021 - 2022</span>
-                  <p>
-                    Commercialized OTP authentication. Partnered with sales to drive
-                    $250K+ ARR. Mentored team on fraud tactics and BI tools.
-                  </p>
-                </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>Fiserv (First Data)</h3>
-                  <span className="timeline-date">2016 - 2020</span>
-                  <p>
-                    Rolled out 3DS 1.0, doubling revenue to $5M annually. Built automated
-                    billing on Azure. Recaptured $1.5M+ through fraud analytics.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="beyond-section">
-          <div className="container">
-            <h2 className="section-title">Beyond the Day Job</h2>
-            <div className="beyond-grid">
-              <div className="beyond-card">
-                <div className="beyond-header">
-                  <h3>🌎 Techqueria ATL</h3>
-                  <span className="beyond-role">Chapter Director</span>
-                </div>
-                <p>
-                  Leading the largest Latinx tech network in Atlanta. Building community,
-                  creating opportunities, and opening doors for the next generation.
-                </p>
-              </div>
-              <div className="beyond-card">
-                <div className="beyond-header">
-                  <h3>🎓 KSU Fintech Advisor</h3>
-                  <span className="beyond-role">Strategic Growth</span>
-                </div>
-                <p>
-                  Advising Kennesaw State's FinTech MS program on curriculum, partnerships,
-                  and employer placement. Helping shape the future of fintech education.
-                </p>
-              </div>
-              <div className="beyond-card">
-                <div className="beyond-header">
-                  <h3>💼 DisruptivePM</h3>
-                  <span className="beyond-role">Founder & Coach</span>
-                </div>
-                <p>
-                  Product management coaching platform helping aspiring and current PMs
-                  level up their skills, build better products, and advance their careers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="cta-section">
-          <div className="container">
-            <div className="cta-content">
-              <h2>Let's Build Something</h2>
-              <p>
-                Whether it's payments, fraud prevention, AI integration, product strategy,
-                or speaking engagements - I'm always interested in solving hard problems
-                with great people.
+            <div className="contact-content">
+              <h2 className="section-title">Let's Connect</h2>
+              <p className="contact-description">
+                Available for product consulting, speaking engagements, and mentorship opportunities.
+                Let's discuss how we can work together.
               </p>
-              <div className="cta-grid">
-                <div className="cta-card">
-                  <h3>💬 Product Consulting</h3>
-                  <p>Need help with product strategy, roadmapping, or go-to-market?</p>
+              <div className="contact-options">
+                <a href="https://linkedin.com" className="contact-card">
+                  <div className="contact-icon">💼</div>
+                  <h3>LinkedIn</h3>
+                  <p>Connect professionally</p>
+                </a>
+                <a href="mailto:salvador@example.com" className="contact-card">
+                  <div className="contact-icon">✉️</div>
+                  <h3>Email</h3>
+                  <p>salvador@example.com</p>
+                </a>
+                <div className="contact-card">
+                  <div className="contact-icon">💼</div>
+                  <h3>DisruptivePM</h3>
+                  <p>Product coaching platform</p>
                 </div>
-                <div className="cta-card">
-                  <h3>🎤 Speaking & Panels</h3>
-                  <p>Looking for a speaker on fintech, product management, or leadership?</p>
-                </div>
-                <div className="cta-card">
-                  <h3>🤝 Mentorship</h3>
-                  <p>Want guidance on breaking into product or advancing your PM career?</p>
-                </div>
-              </div>
-              <div className="cta-buttons">
-                <a href="https://linkedin.com" className="cta-button primary">Connect on LinkedIn</a>
-                <a href="mailto:salvador@example.com" className="cta-button secondary">Drop me a line</a>
               </div>
             </div>
           </div>
