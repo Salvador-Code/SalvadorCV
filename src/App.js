@@ -22,10 +22,10 @@ function App() {
         <div className="nav-container">
           <div className="nav-logo">Salvador</div>
           <div className="nav-links">
-            <a onClick={() => scrollToSection('about')}>About</a>
-            <a onClick={() => scrollToSection('impact')}>Impact</a>
-            <a onClick={() => scrollToSection('expertise')}>Expertise</a>
-            <a onClick={() => scrollToSection('contact')}>Contact</a>
+            <button onClick={() => scrollToSection('about')}>About</button>
+            <button onClick={() => scrollToSection('impact')}>Impact</button>
+            <button onClick={() => scrollToSection('expertise')}>Expertise</button>
+            <button onClick={() => scrollToSection('contact')}>Contact</button>
           </div>
         </div>
       </nav>

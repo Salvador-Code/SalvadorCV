@@ -71,16 +71,20 @@ body {
   gap: 2.5rem;
 }
 
-.nav-links a {
+.nav-links button {
+  background: none;
+  border: none;
+  padding: 0;
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
   transition: color 0.2s ease;
   position: relative;
+  font-family: inherit;
 }
 
-.nav-links a::after {
+.nav-links button::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -91,11 +95,11 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links button:hover {
   color: var(--primary);
 }
 
-.nav-links a:hover::after {
+.nav-links button:hover::after {
   width: 100%;
 }
 
@@ -602,7 +606,7 @@ body {
     gap: 1.5rem;
   }
 
-  .nav-links a {
+  .nav-links button {
     font-size: 0.9rem;
   }
 
@@ -679,7 +683,7 @@ body {
     gap: 1rem;
   }
 
-  .nav-links a {
+  .nav-links button {
     font-size: 0.85rem;
   }
 
