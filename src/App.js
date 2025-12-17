@@ -34,8 +34,12 @@ function App() {
         <div className="hero-gradient"></div>
         <div className="container hero-content">
           <div className="profile-image-container">
-            <div className="profile-image-placeholder">
-              <span className="profile-initials">S</span>
+            <div className="profile-image-wrapper">
+              <img
+                src="/images/salvador-headshot.jpg"
+                alt="Salvador - Senior Technical Product Manager"
+                className="profile-image"
+              />
             </div>
           </div>
           <h1 className="hero-title">Salvador</h1>
