@@ -3,6 +3,9 @@ import './App.css';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [typedText, setTypedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const fullText = 'SALVADOR';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,6 +13,28 @@ function App() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Typing animation effect
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setTypedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 150);
+
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 530);
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
   }, []);
 
   const scrollToSection = (id) => {
@@ -33,32 +58,64 @@ function App() {
       <header className="hero">
         <div className="hero-gradient"></div>
         <div className="container hero-content">
-          <div className="profile-image-container">
-            <div className="profile-image-wrapper">
-              <img
-                src="/images/salvador-headshot.jpg"
-                alt="Salvador - Senior Technical Product Manager"
-                className="profile-image"
-              />
+          <div className="terminal-window">
+            <div className="terminal-header">
+              <div className="terminal-buttons">
+                <span className="terminal-button close"></span>
+                <span className="terminal-button minimize"></span>
+                <span className="terminal-button maximize"></span>
+              </div>
+              <div className="terminal-title">salvador@portfolio:~</div>
             </div>
-          </div>
-          <h1 className="hero-title">Salvador</h1>
-          <p className="hero-subtitle">Senior Technical Product Manager</p>
-          <p className="hero-tagline">
-            Senior technical product leader in enterprise payments, fraud, and B2B acceptance—blending AI,
-            analytics, and commercialization to ship high-impact fintech products.
-          </p>
-          <p className="hero-proof">
-            Trusted by <strong>Visa</strong>, <strong>Shift4</strong>, <strong>CO-OP Solutions</strong>, <strong>Paya</strong>,
-            and <strong>Fiserv</strong> to lead payments, fraud, and authentication roadmaps.
-          </p>
-          <div className="hero-cta">
-            <button onClick={() => scrollToSection('contact')} className="cta-primary">Work With Me</button>
-            <button onClick={() => scrollToSection('impact')} className="cta-secondary">See Impact</button>
+            <div className="terminal-body">
+              <div className="profile-image-container">
+                <div className="profile-image-wrapper">
+                  <img
+                    src="/images/salvador-headshot.jpg"
+                    alt="Salvador - Senior Technical Product Manager"
+                    className="profile-image"
+                  />
+                </div>
+              </div>
+              <div className="code-output">
+                <span className="code-comment">{'//'} Initializing Product Manager...</span>
+                <h1 className="hero-title">
+                  <span className="code-keyword">const</span> {typedText}
+                  <span className={`typing-cursor ${showCursor ? 'visible' : ''}`}>_</span>
+                </h1>
+                <p className="hero-subtitle">Senior Technical Product Manager</p>
+              </div>
+              <div className="api-response">
+                <div className="response-header">
+                  <span className="status-code">200 OK</span>
+                  <span className="response-time">~8 years experience</span>
+                </div>
+                <pre className="code-block">
+{`{
+  "role": "Senior Technical PM",
+  "specialization": ["Payments", "Fraud", "B2B APIs"],
+  "impact": {
+    "revenue": "$5M+",
+    "fraudReduction": "75 bps",
+    "capacity": "300%"
+  },
+  "companies": ["Visa", "Shift4", "CO-OP", "Paya", "Fiserv"]
+}`}
+                </pre>
+              </div>
+              <div className="hero-cta">
+                <button onClick={() => scrollToSection('contact')} className="cta-primary">
+                  <span className="btn-icon">→</span> POST /contact
+                </button>
+                <button onClick={() => scrollToSection('impact')} className="cta-secondary">
+                  <span className="btn-icon">⚡</span> GET /impact
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="scroll-indicator">
-          <span>Scroll to explore</span>
+          <span>scroll --down</span>
           <div className="scroll-arrow"></div>
         </div>
       </header>
@@ -97,23 +154,43 @@ function App() {
 
         <section id="about" className="metrics-section">
           <div className="container">
+            <div className="api-stats-header">
+              <span className="endpoint-badge">GET /api/v1/metrics</span>
+              <span className="live-indicator">● LIVE</span>
+            </div>
             <div className="metrics-grid">
               <div className="metric-card">
+                <div className="metric-header">
+                  <span className="metric-endpoint">/revenue</span>
+                  <span className="metric-status">✓</span>
+                </div>
                 <div className="metric-value">$5M+</div>
                 <div className="metric-label">Revenue Generated</div>
                 <div className="metric-detail">Doubled revenue from $3M to $5M through 3DS product rollout</div>
               </div>
               <div className="metric-card">
+                <div className="metric-header">
+                  <span className="metric-endpoint">/efficiency</span>
+                  <span className="metric-status">✓</span>
+                </div>
                 <div className="metric-value">300%</div>
                 <div className="metric-label">Capacity Increase</div>
                 <div className="metric-detail">Tripled chargeback resolution through portal optimization</div>
               </div>
               <div className="metric-card">
+                <div className="metric-header">
+                  <span className="metric-endpoint">/fraud-reduction</span>
+                  <span className="metric-status">✓</span>
+                </div>
                 <div className="metric-value">75 bps</div>
                 <div className="metric-label">Fraud Reduction</div>
                 <div className="metric-detail">Combined reduction through authentication & fraud systems</div>
               </div>
               <div className="metric-card">
+                <div className="metric-header">
+                  <span className="metric-endpoint">/leadership</span>
+                  <span className="metric-status">✓</span>
+                </div>
                 <div className="metric-value">2 Teams</div>
                 <div className="metric-label">Leadership</div>
                 <div className="metric-detail">Directed 12 developers across two cross-functional teams</div>
@@ -175,9 +252,13 @@ function App() {
         <section id="impact" className="impact-section">
           <div className="container-wide">
             <div className="impact-header">
+              <div className="api-documentation-header">
+                <span className="api-version">API v2.0</span>
+                <span className="endpoint-path">/api/endpoints/achievements</span>
+              </div>
               <h2 className="section-title">Product Wins That Move the Needle</h2>
               <p className="impact-description">
-                Quantified outcomes across fraud reduction, revenue growth, and operational excellence
+                <span className="code-inline">Quantified outcomes</span> across fraud reduction, revenue growth, and operational excellence
               </p>
             </div>
             <div className="wins-grid">
