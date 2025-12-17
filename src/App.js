@@ -79,9 +79,9 @@ function App() {
                 <div className="metric-detail">Combined reduction through authentication & fraud systems</div>
               </div>
               <div className="metric-card">
-                <div className="metric-value">12</div>
-                <div className="metric-label">Teams Led</div>
-                <div className="metric-detail">Directing developer teams across B2B payment solutions</div>
+                <div className="metric-value">2 Teams</div>
+                <div className="metric-label">Leadership</div>
+                <div className="metric-detail">Directed 12 developers across two cross-functional teams</div>
               </div>
             </div>
           </div>
@@ -144,9 +144,9 @@ function App() {
                 <div className="capability-number">01</div>
                 <div className="capability-icon">👥</div>
                 <h3>Leadership & Team Building</h3>
-                <p>Directed 12 cross-functional developer teams across B2B payment solutions. Built succession pathways that promoted 5+ juniors into senior leadership roles. Champion of mentorship and talent development.</p>
+                <p>Directed two cross-functional teams totaling 12 developers across B2B payment solutions. Built succession pathways that promoted 5+ junior engineers into senior leadership roles. Champion of mentorship and talent development.</p>
                 <div className="capability-stat">
-                  <span className="stat-highlight">12</span> Teams Led
+                  <span className="stat-highlight">12</span> Developers Led
                 </div>
               </div>
               <div className="capability-card featured">
