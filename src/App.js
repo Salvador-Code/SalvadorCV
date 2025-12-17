@@ -45,12 +45,16 @@ function App() {
           <h1 className="hero-title">Salvador</h1>
           <p className="hero-subtitle">Senior Technical Product Manager</p>
           <p className="hero-tagline">
-            Building the future of enterprise payments at Visa. First-gen college graduate
-            turning complex fintech challenges into elegant solutions.
+            Senior technical product leader in enterprise payments, fraud, and B2B acceptance—blending AI,
+            analytics, and commercialization to ship high-impact fintech products.
+          </p>
+          <p className="hero-proof">
+            Trusted by <strong>Visa</strong>, <strong>Shift4</strong>, <strong>CO-OP Solutions</strong>, <strong>Paya</strong>,
+            and <strong>Fiserv</strong> to lead payments, fraud, and authentication roadmaps.
           </p>
           <div className="hero-cta">
-            <button onClick={() => scrollToSection('contact')} className="cta-primary">Get In Touch</button>
-            <button onClick={() => scrollToSection('about')} className="cta-secondary">Learn More</button>
+            <button onClick={() => scrollToSection('contact')} className="cta-primary">Work With Me</button>
+            <button onClick={() => scrollToSection('impact')} className="cta-secondary">See Impact</button>
           </div>
         </div>
         <div className="scroll-indicator">
@@ -60,6 +64,37 @@ function App() {
       </header>
 
       <main className="main-content">
+        <section className="experience-strip">
+          <div className="container-wide">
+            <div className="experience-timeline">
+              <div className="exp-item">
+                <h4>Visa</h4>
+                <p>Sr Technical PM, B2B Acceptance</p>
+              </div>
+              <div className="exp-divider">→</div>
+              <div className="exp-item">
+                <h4>Shift4</h4>
+                <p>Sr PM, Online Payments</p>
+              </div>
+              <div className="exp-divider">→</div>
+              <div className="exp-item">
+                <h4>CO-OP Solutions</h4>
+                <p>Sr PM, Auth & Fraud</p>
+              </div>
+              <div className="exp-divider">→</div>
+              <div className="exp-item">
+                <h4>Paya</h4>
+                <p>PM, ERP Integrations</p>
+              </div>
+              <div className="exp-divider">→</div>
+              <div className="exp-item">
+                <h4>Fiserv</h4>
+                <p>Product Leadership</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="about" className="metrics-section">
           <div className="container">
             <div className="metrics-grid">
@@ -89,6 +124,12 @@ function App() {
 
         <section className="about-section">
           <div className="container">
+            <div className="about-intro">
+              <p className="positioning-statement">
+                Results-driven fintech PM with deep expertise in analytics, fraud, and enterprise payments—focused
+                on revenue growth, risk mitigation, and operational efficiency.
+              </p>
+            </div>
             <div className="about-grid">
               <div className="about-content">
                 <h2 className="section-title">Breaking Barriers, Building Products</h2>
@@ -134,53 +175,174 @@ function App() {
         <section id="impact" className="impact-section">
           <div className="container-wide">
             <div className="impact-header">
-              <h2 className="section-title">What I Bring to the Table</h2>
+              <h2 className="section-title">Product Wins That Move the Needle</h2>
               <p className="impact-description">
-                Eight years of turning complex challenges into elegant solutions across the fintech ecosystem
+                Quantified outcomes across fraud reduction, revenue growth, and operational excellence
+              </p>
+            </div>
+            <div className="wins-grid">
+              <div className="win-card">
+                <div className="win-icon">🛡️</div>
+                <div className="win-metric">25+ bps</div>
+                <h3>Fraud Reduction</h3>
+                <p>Cut fraud by 25+ bps for enterprise clients through commercialized fraud and authentication APIs, including real-time analytics dashboards.</p>
+              </div>
+              <div className="win-card">
+                <div className="win-icon">📈</div>
+                <div className="win-metric">$3M → $5M</div>
+                <h3>3DS Revenue Growth</h3>
+                <p>Doubled 3DS recurring revenue from $3M to $5M annually. Recaptured $1.5M+ via fraud analytics and automated billing optimization on Azure.</p>
+              </div>
+              <div className="win-card">
+                <div className="win-icon">✅</div>
+                <div className="win-metric">100%</div>
+                <h3>Visa PRA Compliance</h3>
+                <p>Delivered 60+ ERP migrations to 100% Visa PRA compliance, eliminating regulatory risk and improving payment completion by 28%.</p>
+              </div>
+              <div className="win-card">
+                <div className="win-icon">🔐</div>
+                <div className="win-metric">$250K+ ARR</div>
+                <h3>OTP Authentication</h3>
+                <p>Grew OTP-based 3DS adoption, reducing security incidents by 30% and driving $250K+ in annual recurring revenue through tiered pricing.</p>
+              </div>
+              <div className="win-card">
+                <div className="win-icon">⚡</div>
+                <div className="win-metric">300%</div>
+                <h3>Operational Efficiency</h3>
+                <p>Tripled chargeback resolution capacity through portal optimization, cutting chargeback rates by 50 bps and streamlining merchant workflows.</p>
+              </div>
+              <div className="win-card">
+                <div className="win-icon">💰</div>
+                <div className="win-metric">18%</div>
+                <h3>Transaction Growth</h3>
+                <p>Engineered "link to invoice" feature driving 18% growth in transaction volume and streamlining payment collection for merchants.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="capabilities-section">
+          <div className="container-wide">
+            <div className="impact-header">
+              <h2 className="section-title">How I Drive Impact</h2>
+              <p className="impact-description">
+                Operator + Builder + Strategist across the full product lifecycle
               </p>
             </div>
             <div className="capabilities-showcase">
               <div className="capability-card featured">
                 <div className="capability-number">01</div>
-                <div className="capability-icon">👥</div>
-                <h3>Leadership & Team Building</h3>
-                <p>Directed two cross-functional teams totaling 12 developers across B2B payment solutions. Built succession pathways that promoted 5+ junior engineers into senior leadership roles. Champion of mentorship and talent development.</p>
-                <div className="capability-stat">
-                  <span className="stat-highlight">12</span> Developers Led
+                <div className="capability-icon">📈</div>
+                <h3>Revenue Growth & P&L</h3>
+                <p><strong>Result:</strong> Doubled recurring revenue from $3M to $5M through strategic 3DS product rollout. Drove $250K+ ARR through OTP authentication commercialization and tiered pricing models.</p>
+                <div className="domain-tags">
+                  <span className="tag">B2B Payments</span>
+                  <span className="tag">Pricing Strategy</span>
                 </div>
               </div>
               <div className="capability-card featured">
                 <div className="capability-number">02</div>
-                <div className="capability-icon">📈</div>
-                <h3>Revenue Growth & P&L</h3>
-                <p>Doubled recurring revenue from $3M to $5M through strategic 3DS product rollout. Drove $250K+ ARR through OTP authentication commercialization. Expert in pricing strategy and revenue optimization.</p>
-                <div className="capability-stat">
-                  <span className="stat-highlight">$5M+</span> Revenue Generated
+                <div className="capability-icon">🛡️</div>
+                <h3>Fraud & Risk Mitigation</h3>
+                <p><strong>Result:</strong> Cut fraud 25+ bps for enterprise clients. Recaptured $1.5M+ annually through fraud analytics. Built authentication systems reducing security incidents 30%.</p>
+                <div className="domain-tags">
+                  <span className="tag">Fraud & Risk</span>
+                  <span className="tag">Authentication</span>
                 </div>
               </div>
               <div className="capability-card">
                 <div className="capability-number">03</div>
-                <div className="capability-icon">🛡️</div>
-                <h3>Fraud & Security</h3>
-                <p>Built authentication systems cutting security incidents 30%. Designed fraud analytics that recaptured $1.5M+ annually. Deep expertise in 3D Secure, OTP, and real-time detection.</p>
+                <div className="capability-icon">👥</div>
+                <h3>Team Leadership</h3>
+                <p><strong>Result:</strong> Directed 2 cross-functional teams (12 developers) across B2B payments. Promoted 5+ junior engineers into senior roles through mentorship and succession planning.</p>
+                <div className="domain-tags">
+                  <span className="tag">Leadership</span>
+                </div>
               </div>
               <div className="capability-card">
                 <div className="capability-number">04</div>
-                <div className="capability-icon">🚀</div>
+                <div className="capability-icon">🎯</div>
                 <h3>Product Strategy & GTM</h3>
-                <p>Full lifecycle ownership from market analysis to commercialization. Led launches processing millions in transactions. Expert in competitive positioning and go-to-market execution.</p>
+                <p><strong>Result:</strong> Full lifecycle ownership from market analysis to commercialization. Launched payment solutions processing millions in transactions with competitive positioning and pricing strategy.</p>
+                <div className="domain-tags">
+                  <span className="tag">GTM Strategy</span>
+                  <span className="tag">Portfolio Leadership</span>
+                </div>
               </div>
               <div className="capability-card">
                 <div className="capability-number">05</div>
-                <div className="capability-icon">🤖</div>
-                <h3>AI & Innovation</h3>
-                <p>Championing AI initiatives at Visa to automate workflows. Integrating prompt engineering with enterprise payments to enhance product intelligence and operational efficiency.</p>
+                <div className="capability-icon">📊</div>
+                <h3>Data & Analytics</h3>
+                <p><strong>Result:</strong> Built fraud analytics frameworks cutting review times 30%. Designed BI dashboards and KPI frameworks using SQL, Power BI, Tableau, and R for executive decision-making.</p>
+                <div className="domain-tags">
+                  <span className="tag">AI & Analytics</span>
+                </div>
               </div>
               <div className="capability-card">
                 <div className="capability-number">06</div>
-                <div className="capability-icon">🤝</div>
-                <h3>Stakeholder Alignment</h3>
-                <p>Orchestrated cross-functional collaboration with engineering, legal, compliance, and marketing teams. Expert at C-level reporting and executive decision-making support.</p>
+                <div className="capability-icon">⚙️</div>
+                <h3>ERP & Compliance</h3>
+                <p><strong>Result:</strong> Delivered 60+ ERP migrations to 100% Visa PRA compliance. Raised client productivity 15% and payment completion 28% through optimized integration workflows.</p>
+                <div className="domain-tags">
+                  <span className="tag">ERP Integrations</span>
+                  <span className="tag">PRA Compliance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="competencies-section">
+          <div className="container-wide">
+            <h2 className="section-title">Core Competencies</h2>
+            <div className="competency-clusters">
+              <div className="cluster-card">
+                <h3>Product & Strategy</h3>
+                <p>Roadmapping, GTM, portfolio leadership, P&L, market and competitive analysis, pricing strategy</p>
+              </div>
+              <div className="cluster-card">
+                <h3>Risk & Payments</h3>
+                <p>Fraud platforms, 3DS, authentication, ERP payments, tokenization, PRA compliance, chargeback management</p>
+              </div>
+              <div className="cluster-card">
+                <h3>Data & Analytics</h3>
+                <p>SQL, R, BI dashboards (Power BI, Tableau), fraud analytics frameworks, KPI design, predictive modeling</p>
+              </div>
+              <div className="cluster-card">
+                <h3>Engineering & APIs</h3>
+                <p>REST APIs, JavaScript, Node.js, Azure, GitHub, Postman, API integration, microservices architecture</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="community-section">
+          <div className="container">
+            <h2 className="section-title">Community & Advisory</h2>
+            <div className="community-grid">
+              <div className="community-card">
+                <div className="community-icon">🌎</div>
+                <h3>Techqueria Atlanta</h3>
+                <span className="role-badge">Chapter Director</span>
+                <p>Leading programming, partnerships, and career pathways for the largest Latinx tech network in Atlanta.</p>
+              </div>
+              <div className="community-card">
+                <div className="community-icon">🎓</div>
+                <h3>KSU Fintech MS Program</h3>
+                <span className="role-badge">Strategic Growth Advisor</span>
+                <p>Advising on curriculum, partnerships, and growth strategy—supporting 25%+ annual enrollment growth and employer placement.</p>
+              </div>
+              <div className="community-card">
+                <div className="community-icon">💼</div>
+                <h3>DisruptivePM</h3>
+                <span className="role-badge">Founder & Coach</span>
+                <p>Coaching aspiring and mid-career PMs into fintech and SaaS roles through personalized product strategy mentorship.</p>
+              </div>
+              <div className="community-card">
+                <div className="community-icon">🎤</div>
+                <h3>Thought Leadership</h3>
+                <span className="role-badge">Speaker & Mentor</span>
+                <p>Former Toastmasters chapter president. Mentoring early-career talent at Chattahoochee Tech on communication and analytics.</p>
               </div>
             </div>
           </div>

@@ -250,8 +250,22 @@ button, .nav-links {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.5rem;
   animation: fadeIn 1s ease-out 0.8s both;
+}
+
+.hero-proof {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  animation: fadeIn 1s ease-out 0.9s both;
+}
+
+.hero-proof strong {
+  color: var(--gold-light);
+  font-weight: 600;
 }
 
 .hero-cta {
@@ -448,11 +462,95 @@ button, .nav-links {
   line-height: 1.7;
 }
 
+/* Experience Timeline Strip */
+.experience-strip {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.experience-timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.exp-item {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.exp-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 0.25rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.exp-item p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.exp-item:hover {
+  transform: scale(1.05);
+}
+
+.exp-item:hover h4 {
+  color: var(--gold);
+}
+
+.exp-divider {
+  font-size: 1.5rem;
+  color: var(--gold);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
 /* About Section */
 .about-section {
   padding: 8rem 0;
   background: white;
   position: relative;
+}
+
+.about-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.positioning-statement {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-style: italic;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .about-grid {
@@ -577,6 +675,84 @@ button, .nav-links {
   line-height: 1.8;
 }
 
+/* Product Wins Grid */
+.wins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.win-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.win-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.win-card:hover::before {
+  transform: scaleX(1);
+}
+
+.win-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--gold);
+}
+
+.win-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.win-card:hover .win-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.win-metric {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  letter-spacing: -0.02em;
+}
+
+.win-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.win-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
 .capabilities-showcase {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -692,6 +868,197 @@ button, .nav-links {
   margin-right: 0.5rem;
   display: inline-block;
   font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* Domain Tags */
+.domain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(240, 217, 125, 0.1));
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: white;
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Competencies Section */
+.competencies-section {
+  padding: 6rem 0;
+  background: white;
+  position: relative;
+}
+
+.competencies-section .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.competency-clusters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cluster-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cluster-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #8b5cf6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.cluster-card:hover::before {
+  transform: scaleX(1);
+}
+
+.cluster-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.cluster-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.cluster-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Community Section */
+.community-section {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+}
+
+.community-section .section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.community-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.community-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.community-card:hover::before {
+  transform: scaleX(1);
+}
+
+.community-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--gold);
+}
+
+.community-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.community-card:hover .community-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.community-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.community-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 /* Expertise Section */
@@ -978,6 +1345,31 @@ button, .nav-links {
     font-size: 1.1rem;
   }
 
+  .wins-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competency-clusters {
+    grid-template-columns: 1fr;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-timeline {
+    gap: 1rem;
+  }
+
+  .exp-divider {
+    display: none;
+  }
+
+  .positioning-statement {
+    font-size: 1.1rem;
+    padding: 1.5rem 2rem;
+  }
+
   .contact-options {
     grid-template-columns: 1fr;
   }
@@ -1006,5 +1398,26 @@ button, .nav-links {
 
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  .win-metric {
+    font-size: 2.5rem;
+  }
+
+  .win-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .positioning-statement {
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .exp-item h4 {
+    font-size: 1rem;
+  }
+
+  .exp-item p {
+    font-size: 0.8rem;
   }
 }
