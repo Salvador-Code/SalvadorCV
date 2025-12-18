@@ -822,21 +822,21 @@ function App() {
                 Let's discuss how we can work together.
               </p>
               <div className="contact-options">
-                <a href="https://linkedin.com" className="contact-card">
+                <a href="https://www.linkedin.com/in/salvadorsantosprod/" className="contact-card">
                   <div className="contact-icon">💼</div>
                   <h3>LinkedIn</h3>
                   <p>Connect professionally</p>
                 </a>
-                <a href="mailto:salvador@example.com" className="contact-card">
+                <a href="mailto:salvador@disruptivepm.com" className="contact-card">
                   <div className="contact-icon">✉️</div>
                   <h3>Email</h3>
-                  <p>salvador@example.com</p>
+                  <p>salvador@disruptivepm.com</p>
                 </a>
-                <div className="contact-card">
-                  <div className="contact-icon">💼</div>
+                <a href="https://www.disruptivepm.com/" className="contact-card">
+                  <div className="contact-icon">🚀</div>
                   <h3>DisruptivePM</h3>
                   <p>Product coaching platform</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
