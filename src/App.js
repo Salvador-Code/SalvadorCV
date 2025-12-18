@@ -5,12 +5,28 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
+  const [activeSection, setActiveSection] = useState('');
   const fullText = 'SALVADOR';
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Update active section based on scroll position
+      const sections = ['hero', 'experience', 'metrics', 'about', 'ecosystem', 'impact', 'capabilities', 'competencies', 'community', 'expertise', 'testimonials', 'contact'];
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -43,6 +59,45 @@ function App() {
 
   return (
     <div className="App">
+      {/* API Documentation Navigation Sidebar */}
+      <nav className="api-nav-sidebar">
+        <div className="api-nav-header">
+          <span className="api-nav-title">API DOCS</span>
+          <span className="api-nav-version">v2.0</span>
+        </div>
+        <div className="api-nav-sections">
+          <a href="#hero" className={activeSection === 'hero' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>
+            <span className="nav-method">GET</span> Introduction
+          </a>
+          <a href="#metrics" className={activeSection === 'metrics' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('metrics'); }}>
+            <span className="nav-method">GET</span> Metrics
+          </a>
+          <a href="#ecosystem" className={activeSection === 'ecosystem' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('ecosystem'); }}>
+            <span className="nav-method">GET</span> Ecosystem
+          </a>
+          <a href="#impact" className={activeSection === 'impact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('impact'); }}>
+            <span className="nav-method">GET</span> Achievements
+          </a>
+          <a href="#capabilities" className={activeSection === 'capabilities' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('capabilities'); }}>
+            <span className="nav-method">GET</span> Capabilities
+          </a>
+          <a href="#expertise" className={activeSection === 'expertise' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('expertise'); }}>
+            <span className="nav-method">GET</span> Tech Stack
+          </a>
+          <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>
+            <span className="nav-method">GET</span> Reviews
+          </a>
+          <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
+            <span className="nav-method">POST</span> Contact
+          </a>
+        </div>
+        <div className="api-nav-footer">
+          <div className="progress-bar">
+            <div className="progress-fill" style={{height: `${(Object.keys(['hero', 'metrics', 'ecosystem', 'impact', 'capabilities', 'expertise', 'testimonials', 'contact']).indexOf(activeSection) + 1) / 8 * 100}%`}}></div>
+          </div>
+        </div>
+      </nav>
+
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
           <div className="nav-logo">Salvador</div>
@@ -88,7 +143,7 @@ function App() {
               <div className="api-response">
                 <div className="response-header">
                   <span className="status-code">200 OK</span>
-                  <span className="response-time">~8 years experience</span>
+                  <span className="response-time">~decade of experience</span>
                 </div>
                 <pre className="code-block">
 {`{
@@ -208,7 +263,7 @@ function App() {
             </div>
             <div className="about-grid">
               <div className="about-content">
-                <h2 className="section-title">Full-Stack Payment Expertise</h2>
+                <h2 className="section-title">About</h2>
                 <p className="about-text">
                   As a <strong>first-generation college graduate</strong> and proud Hispanic American,
                   I understand what it means to break through barriers. That resilience shapes how I
@@ -217,15 +272,12 @@ function App() {
                 </p>
                 <p className="about-text">
                   I've worked across the <strong>entire payment value chain</strong>: processor, acquirer,
-                  card brand (Visa), and fintech—giving me unique insight into each stakeholder's needs.
-                  I bring products from <strong>zero to one</strong> through go-to-market strategy, vendor
-                  RFIs, build/buy/partner analysis, pricing strategy, and enterprise client partnerships.
+                  card brand (Visa), and fintech—giving me unique insight into each stakeholder's needs
+                  and the ability to navigate complex ecosystem partnerships.
                 </p>
                 <p className="about-text">
                   Currently at <strong>Visa</strong>, I lead B2B acceptance products, championing AI
-                  integration and directing cross-functional developer teams. My experience spans
-                  <strong> B2B and B2C</strong> markets, managing everything from fraud SDKs to payment
-                  gateways, authentication platforms, and partner solution integrations.
+                  integration and directing cross-functional developer teams across <strong>B2B and B2C</strong> markets.
                 </p>
                 <p className="about-text">
                   Beyond my day job, I'm the founder of <strong>DisruptivePM</strong>, a product
@@ -237,7 +289,7 @@ function App() {
                 <div className="highlight-item">
                   <span className="highlight-number">01</span>
                   <h3>Product Leadership</h3>
-                  <p>8+ years leading fintech products from ideation to commercialization</p>
+                  <p>A decade leading fintech products from ideation to commercialization</p>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-number">02</span>
