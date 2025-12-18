@@ -203,13 +203,12 @@ function App() {
           <div className="container">
             <div className="about-intro">
               <p className="positioning-statement">
-                Results-driven fintech PM with deep expertise in analytics, fraud, and enterprise payments—focused
-                on revenue growth, risk mitigation, and operational efficiency.
+                <span className="code-inline">Zero-to-one</span> product leader with deep expertise in <span className="code-inline">go-to-market strategy</span>, vendor management, and enterprise payments—bringing products from concept to commercialization across the <span className="code-inline">full payment ecosystem</span>.
               </p>
             </div>
             <div className="about-grid">
               <div className="about-content">
-                <h2 className="section-title">Breaking Barriers, Building Products</h2>
+                <h2 className="section-title">Full-Stack Payment Expertise</h2>
                 <p className="about-text">
                   As a <strong>first-generation college graduate</strong> and proud Hispanic American,
                   I understand what it means to break through barriers. That resilience shapes how I
@@ -217,10 +216,16 @@ function App() {
                   elegant solutions that move millions of dollars.
                 </p>
                 <p className="about-text">
+                  I've worked across the <strong>entire payment value chain</strong>: processor, acquirer,
+                  card brand (Visa), and fintech—giving me unique insight into each stakeholder's needs.
+                  I bring products from <strong>zero to one</strong> through go-to-market strategy, vendor
+                  RFIs, build/buy/partner analysis, pricing strategy, and enterprise client partnerships.
+                </p>
+                <p className="about-text">
                   Currently at <strong>Visa</strong>, I lead B2B acceptance products, championing AI
-                  integration and directing cross-functional developer teams. My journey spans Shift4,
-                  CO-OP Solutions, Paya, and Fiserv—where I've built fraud prevention systems,
-                  authentication platforms, and payment gateways that serve enterprises globally.
+                  integration and directing cross-functional developer teams. My experience spans
+                  <strong> B2B and B2C</strong> markets, managing everything from fraud SDKs to payment
+                  gateways, authentication platforms, and partner solution integrations.
                 </p>
                 <p className="about-text">
                   Beyond my day job, I'm the founder of <strong>DisruptivePM</strong>, a product
@@ -244,6 +249,102 @@ function App() {
                   <h3>Thought Leadership</h3>
                   <p>Speaking on panels about fintech, product strategy, and diversity</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="ecosystem-section">
+          <div className="container-wide">
+            <div className="ecosystem-header">
+              <div className="api-documentation-header">
+                <span className="api-version">System Map</span>
+                <span className="endpoint-path">/api/payments/ecosystem</span>
+              </div>
+              <h2 className="section-title">Payment Ecosystem Experience</h2>
+              <p className="impact-description">
+                Unique perspective across <span className="code-inline">all layers</span> of the payment value chain
+              </p>
+            </div>
+
+            <div className="ecosystem-grid">
+              <div className="ecosystem-card card-brand">
+                <div className="card-header">
+                  <span className="layer-badge brand">Card Brand</span>
+                  <span className="company-tag">Visa</span>
+                </div>
+                <h3>Card Network</h3>
+                <p>B2B acceptance products, authentication, fraud prevention at the network level</p>
+                <div className="tech-stack">
+                  <span>Network Rules</span>
+                  <span>Scheme Compliance</span>
+                  <span>Global Standards</span>
+                </div>
+              </div>
+
+              <div className="ecosystem-card processor">
+                <div className="card-header">
+                  <span className="layer-badge processor">Processor</span>
+                  <span className="company-tag">Shift4 · Paya</span>
+                </div>
+                <h3>Payment Processing</h3>
+                <p>Transaction processing, gateway development, 3DS authentication, authorization flows</p>
+                <div className="tech-stack">
+                  <span>Gateway APIs</span>
+                  <span>Auth Systems</span>
+                  <span>3DS 2.0</span>
+                </div>
+              </div>
+
+              <div className="ecosystem-card acquirer">
+                <div className="card-header">
+                  <span className="layer-badge acquirer">Acquirer</span>
+                  <span className="company-tag">CO-OP · Fiserv</span>
+                </div>
+                <h3>Merchant Acquiring</h3>
+                <p>Fraud platforms, chargeback management, merchant onboarding, risk monitoring</p>
+                <div className="tech-stack">
+                  <span>Risk Engine</span>
+                  <span>Chargeback Ops</span>
+                  <span>KYC/KYB</span>
+                </div>
+              </div>
+
+              <div className="ecosystem-card fintech">
+                <div className="card-header">
+                  <span className="layer-badge fintech">Fintech</span>
+                  <span className="company-tag">Multiple</span>
+                </div>
+                <h3>Fintech Innovation</h3>
+                <p>ERP integrations, embedded payments, SDK development, partner solutions</p>
+                <div className="tech-stack">
+                  <span>REST APIs</span>
+                  <span>SDKs</span>
+                  <span>Webhooks</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="value-props">
+              <div className="value-prop-card">
+                <div className="prop-icon">🎯</div>
+                <h4>Zero-to-One Product Development</h4>
+                <p>Built products from concept to launch—including 3DS authentication platform generating $5M ARR and fraud SDKs serving enterprise clients</p>
+              </div>
+              <div className="value-prop-card">
+                <div className="prop-icon">🤝</div>
+                <h4>Build/Buy/Partner Expertise</h4>
+                <p>Led vendor RFIs, market analysis, and build vs. partner decisions. Managed multiple partner solution integrations for enterprise clients</p>
+              </div>
+              <div className="value-prop-card">
+                <div className="prop-icon">📊</div>
+                <h4>Go-to-Market Strategy</h4>
+                <p>Commercialization expert: pricing strategy, competitive positioning, client engagement, and revenue growth across B2B and B2C markets</p>
+              </div>
+              <div className="value-prop-card">
+                <div className="prop-icon">⚙️</div>
+                <h4>Vendor & Client Management</h4>
+                <p>Managed vendor relationships, negotiated contracts, pricing models. Deep client partnerships with fraud teams and enterprise stakeholders</p>
               </div>
             </div>
           </div>
