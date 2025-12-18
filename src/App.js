@@ -481,6 +481,185 @@ function App() {
           </div>
         </section>
 
+        <section className="testimonials-section">
+          <div className="container-wide">
+            <div className="testimonials-header">
+              <div className="api-documentation-header">
+                <span className="api-version">Reviews v1.0</span>
+                <span className="endpoint-path">/api/reviews/leadership</span>
+              </div>
+              <h2 className="section-title">Peer Code Reviews</h2>
+              <p className="impact-description">
+                <span className="code-inline">5/5 stars</span> from industry leaders and cross-functional partners
+              </p>
+            </div>
+
+            <div className="testimonials-grid">
+              <div className="testimonial-card">
+                <div className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-buttons">
+                      <span className="terminal-button close"></span>
+                      <span className="terminal-button minimize"></span>
+                      <span className="terminal-button maximize"></span>
+                    </div>
+                    <div className="terminal-title">review_from_ajay_guru.txt</div>
+                  </div>
+                  <div className="terminal-body-compact">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4>Ajay Guru</h4>
+                        <p className="reviewer-role">SVP & GM, Equifax Digital Solutions</p>
+                        <span className="relationship-badge">Direct Manager</span>
+                      </div>
+                      <div className="review-rating">
+                        <span className="stars">★★★★★</span>
+                      </div>
+                    </div>
+                    <div className="review-content">
+                      <p className="review-quote">"Work ethic like no one else. Extremely hardworking, punctual, steadfast, and tenacious. Skilled in portfolio product management and always thorough."</p>
+                      <div className="review-tags">
+                        <span className="tag-highlight">Dedication</span>
+                        <span className="tag-highlight">Tenacity</span>
+                        <span className="tag-highlight">Excellence</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-buttons">
+                      <span className="terminal-button close"></span>
+                      <span className="terminal-button minimize"></span>
+                      <span className="terminal-button maximize"></span>
+                    </div>
+                    <div className="terminal-title">review_from_christopher_ciraky.txt</div>
+                  </div>
+                  <div className="terminal-body-compact">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4>Christopher Ciraky</h4>
+                        <p className="reviewer-role">Director, Broadcom Payment Security</p>
+                        <span className="relationship-badge">Former Manager</span>
+                      </div>
+                      <div className="review-rating">
+                        <span className="stars">★★★★★</span>
+                      </div>
+                    </div>
+                    <div className="review-content">
+                      <p className="review-quote">"Truly a rare talent. Constantly finds ways to exceed expectations, always learning and improving both yourself and your work. A pleasure to work with."</p>
+                      <div className="review-tags">
+                        <span className="tag-highlight">Rare Talent</span>
+                        <span className="tag-highlight">Continuous Learning</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-buttons">
+                      <span className="terminal-button close"></span>
+                      <span className="terminal-button minimize"></span>
+                      <span className="terminal-button maximize"></span>
+                    </div>
+                    <div className="terminal-title">review_from_sergio_valencia.txt</div>
+                  </div>
+                  <div className="terminal-body-compact">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4>Sergio Valencia</h4>
+                        <p className="reviewer-role">VP Authentication, Velera</p>
+                        <span className="relationship-badge">Cross-Functional Partner</span>
+                      </div>
+                      <div className="review-rating">
+                        <span className="stars">★★★★★</span>
+                      </div>
+                    </div>
+                    <div className="review-content">
+                      <p className="review-quote">"Exceptionally talented leader with strong analytical prowess and business acumen. Delivers 360° insights that advance organizations. Deep expertise in fraud, data, and product."</p>
+                      <div className="review-tags">
+                        <span className="tag-highlight">Leadership</span>
+                        <span className="tag-highlight">Analytics</span>
+                        <span className="tag-highlight">360° Impact</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-buttons">
+                      <span className="terminal-button close"></span>
+                      <span className="terminal-button minimize"></span>
+                      <span className="terminal-button maximize"></span>
+                    </div>
+                    <div className="terminal-title">review_from_michael_anton.txt</div>
+                  </div>
+                  <div className="terminal-body-compact">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4>Michael Anton</h4>
+                        <p className="reviewer-role">Engineering Colleague</p>
+                        <span className="relationship-badge">Former Teammate</span>
+                      </div>
+                      <div className="review-rating">
+                        <span className="stars">★★★★★</span>
+                      </div>
+                    </div>
+                    <div className="review-content">
+                      <p className="review-quote">"Absolute pleasure to work with. Strong can-do attitude and tireless work ethic. Quickly ramps up on complex business and technical projects."</p>
+                      <div className="review-tags">
+                        <span className="tag-highlight">Can-Do Attitude</span>
+                        <span className="tag-highlight">Fast Learner</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-buttons">
+                      <span className="terminal-button close"></span>
+                      <span className="terminal-button minimize"></span>
+                      <span className="terminal-button maximize"></span>
+                    </div>
+                    <div className="terminal-title">review_from_saqib_shariff.txt</div>
+                  </div>
+                  <div className="terminal-body-compact">
+                    <div className="review-header">
+                      <div className="reviewer-info">
+                        <h4>Saqib Shariff</h4>
+                        <p className="reviewer-role">Sr Investigator, Fraud Prevention</p>
+                        <span className="relationship-badge">Cross-Team Partner</span>
+                      </div>
+                      <div className="review-rating">
+                        <span className="stars">★★★★★</span>
+                      </div>
+                    </div>
+                    <div className="review-content">
+                      <p className="review-quote">"Trusted colleague, always helpful with technical issues and willing to sacrifice your time. Critical to client success. A pleasure and honor to work with you."</p>
+                      <div className="review-tags">
+                        <span className="tag-highlight">Trusted Partner</span>
+                        <span className="tag-highlight">Client Success</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="contact-section">
           <div className="container">
             <div className="contact-content">
