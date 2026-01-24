@@ -127,7 +127,7 @@ function App() {
                 <div className="profile-image-wrapper">
                   <img
                     src="/images/salvador-headshot.jpg"
-                    alt="Salvador - Senior Technical Product Manager"
+                    alt="Salvador - Product Leader"
                     className="profile-image"
                   />
                 </div>
@@ -138,7 +138,7 @@ function App() {
                   <span className="code-keyword">const</span> {typedText}
                   <span className={`typing-cursor ${showCursor ? 'visible' : ''}`}>_</span>
                 </h1>
-                <p className="hero-subtitle">Senior Technical Product Manager</p>
+                <p className="hero-subtitle">Product Leader</p>
               </div>
               <div className="api-response">
                 <div className="response-header">
